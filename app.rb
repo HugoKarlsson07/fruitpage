@@ -25,8 +25,6 @@ post('/fruits/:id/update') do
   db = SQLite3::Database.new("db/fruits.db")
   db.execute("UPDATE fruits SET name=?,amount=? WHERE id=?",[name,amount,id])
 
-
-
   redirect('/fruits')
 end
 
